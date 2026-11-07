@@ -1,0 +1,170 @@
+/**
+ * Projects shown in the Work section. Add REAL projects only.
+ *
+ * Owner-editable template (copy, fill in, and add to the array):
+ *
+ * {
+ *   id: "my-project",                       // unique, url-safe
+ *   title: "Project name",
+ *   category: "Web App",                    // used for filters
+ *   year: "2025",                           // or ""
+ *   summary: "One-sentence description.",
+ *   description: "What you actually built and why.",
+ *   role: "Your role",
+ *   tools: ["React", "Node.js"],
+ *   outcomes: [],                           // verified results only
+ *   coverImage: "/assets/projects/my-project.webp",
+ *   coverWidth: 1600, coverHeight: 1000,    // optional, avoids layout shift
+ *   gallery: [],                            // ["/assets/projects/my-project-2.webp"]
+ *   videoUrl: "",                           // YouTube URL; loads only on click
+ *   liveUrl: "",
+ *   sourceUrl: "",
+ *   featured: true,
+ * }
+ */
+export const projects = [
+  {
+    id: "nexnest",
+    title: "NexNest",
+    category: "Platform / SaaS",
+    year: "2026",
+    summary: "Next-generation residential platform for running a lived-in community.",
+    description:
+      "A post-possession portal for residential communities: residents, the society/RWA, staff, billing, security and facilities in one platform. It models the property tree (community, tower, floor, unit) with role + action + scope authorization, per-community module toggles and a full audit log. Modules include resident move-in/move-out with history, society governance (committee terms, meetings, resolutions), a noticeboard on a multi-channel communication layer, maintenance billing with GST, late fees and dues aging, and double-entry society accounting with bank reconciliation, budgets and books lock.",
+    role: "Architect and full-stack developer",
+    tools: ["Laravel", "PHP 8.3", "React 19", "TypeScript", "TanStack Query", "MySQL", "Flutter", "Docker", "Terraform"],
+    outcomes: [],
+    coverImage: "",
+    gallery: [],
+    videoUrl: "",
+    liveUrl: "https://nexnest-eight.vercel.app",
+    sourceUrl: "",
+    featured: true,
+  },
+  {
+    id: "bodyiq",
+    title: "BodyIQ",
+    category: "Mobile App",
+    year: "2026",
+    summary: "Adaptive fitness and nutrition companion: understand your body, improve your results.",
+    description:
+      "A Flutter app for iOS and Android backed by a FastAPI modular monolith with Celery workers. A deterministic engine written in pure Python has a Dart port of its offline subset, and both are checked against shared test vectors. Includes text food logging (rule-based parser, or Claude when configured), an exercise library with starter routine templates, daily insights, an OpenAPI contract as the source of truth for clients, and role-gated admin endpoints.",
+    role: "Architect and full-stack developer",
+    tools: ["Flutter", "Dart", "Riverpod", "Python", "FastAPI", "Celery", "PostgreSQL", "pgvector", "Redis", "Firebase Auth", "Docker"],
+    outcomes: [],
+    coverImage: "",
+    gallery: [],
+    videoUrl: "",
+    liveUrl: "",
+    sourceUrl: "",
+    featured: true,
+  },
+  {
+    id: "savewise",
+    title: "SaveWise",
+    category: "Mobile App",
+    year: "2026",
+    summary: "AI-powered personal finance and savings companion.",
+    description:
+      "SaveWise tracks income and expenses automatically from bank SMS on Android, or from receipt photos and manual entry, then categorizes every transaction and turns it into data-backed insights and savings recommendations. Features include an on-device SMS parser with confidence scoring and a review queue, receipt scanning with a vision LLM, duplicate detection, recurring and subscription tracking, budgets, savings goals, investment tracking with CAS PDF import, and an AI chat that only reasons over real backend data. Insight numbers are always computed deterministically; the LLM phrases them and never invents figures.",
+    role: "Architect and full-stack developer",
+    tools: ["Laravel 13", "PHP", "PostgreSQL", "Redis", "Expo", "React Native", "TypeScript", "Kotlin", "Claude API", "Docker"],
+    outcomes: [],
+    coverImage: "",
+    gallery: [],
+    videoUrl: "",
+    liveUrl: "",
+    sourceUrl: "https://github.com/mukund-codex/savewise",
+    featured: true,
+  },
+  {
+    id: "snagging",
+    title: "Snagging",
+    category: "Platform / SaaS",
+    year: "2026",
+    summary: "Inspection and defect tracking for new homes, on web and mobile.",
+    description:
+      "A snagging portal and mobile app built on the NexNest API and accounts. Residents report defects with photos and follow each fix; the QC desk triages, assigns and verifies; technicians and vendor staff fix them; and the resident confirms the result.",
+    role: "Full-stack developer",
+    tools: ["React", "TypeScript", "Vite", "Flutter", "Laravel", "MySQL"],
+    outcomes: [],
+    coverImage: "",
+    gallery: [],
+    videoUrl: "",
+    liveUrl: "",
+    sourceUrl: "",
+    featured: true,
+  },
+  {
+    id: "levonor",
+    title: "Levonor",
+    category: "Platform / SaaS",
+    year: "2026",
+    summary: "A client-branded build of the snagging portal, prepared for Levonor.",
+    description:
+      "A white-label skin of the Snagging portal for Levonor's Egeira project in Hyderabad, selected at build time. It carries the client's wordmark, typography and photography, and a guided flow for pre-handover inspection: the QC team inspects first, buyers then report anything they find, and every fix is photographed, verified and confirmed.",
+    role: "Full-stack developer",
+    tools: ["React", "TypeScript", "Vite", "Laravel"],
+    outcomes: [],
+    coverImage: "",
+    gallery: [],
+    videoUrl: "",
+    liveUrl: "",
+    sourceUrl: "",
+    featured: false,
+  },
+  {
+    id: "anacity",
+    title: "Anacity",
+    category: "Platform / SaaS",
+    year: "2025",
+    summary: "Multi-tenant society management platform at Anarock.",
+    description:
+      "A shared-schema multi-tenant database with tenant-scoped indexing, row-level isolation, read replicas and connection pooling. Services are split into bounded-context microservices with versioned REST APIs and asynchronous events, plus idempotent payment processing and Redis TTL/cache-aside caching that improved p99 latency.",
+    role: "Technical Lead",
+    tools: ["Laravel", "ReactJS", "MySQL", "PostgreSQL", "Redis", "AWS", "Docker"],
+    outcomes: ["Production bugs cut by 68% (632 to about 200) in 2 months."],
+    coverImage: "",
+    gallery: [],
+    videoUrl: "",
+    liveUrl: "",
+    sourceUrl: "",
+    featured: false,
+  },
+  {
+    id: "ticket-analytics",
+    title: "Zendesk & Jira Ticket Analytics",
+    category: "Backend",
+    year: "2025",
+    summary: "Real-time analytics over Zendesk and Jira tickets.",
+    description:
+      "Rate-limited, paginated ingestion from the Zendesk and Jira REST APIs with retries and normalization. Reports are generated asynchronously on Redis-backed Laravel queues.",
+    role: "Technical Lead",
+    tools: ["Laravel", "Zendesk API", "Jira REST API", "MySQL", "Redis"],
+    outcomes: ["Report generation went from several hours to under 10 seconds."],
+    coverImage: "",
+    gallery: [],
+    videoUrl: "",
+    liveUrl: "",
+    sourceUrl: "",
+    featured: false,
+  },
+  {
+    id: "greenspace",
+    title: "Greenspace",
+    category: "Platform / SaaS",
+    year: "",
+    summary: "Golf network and community app.",
+    description:
+      "A normalized schema and versioned REST API for scoring, memberships and leaderboards. Owned the product from MVP through feature expansion.",
+    role: "Senior Software Engineer",
+    tools: ["Laravel", "ReactJS", "PostgreSQL", "Docker", "Heroku"],
+    outcomes: [],
+    coverImage: "",
+    gallery: [],
+    videoUrl: "",
+    liveUrl: "",
+    sourceUrl: "",
+    featured: false,
+  },
+];
